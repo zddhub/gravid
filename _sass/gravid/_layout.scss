@@ -1,0 +1,31 @@
+/**
+ * Header
+ */
+
+.site-header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 30px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  z-index: 1;
+  line-height: 50px;
+  font-size: 20px;
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.site-nav {
+  float: right;
+  display: inline-block;
+}
+
+.sidebar-nav-item {
+  padding: 0 10px;
+}
