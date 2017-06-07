@@ -8,7 +8,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  padding: 0 30px;
+  padding: 0 20px;
   border-bottom: 1px solid #eee;
   background: #fff;
   z-index: 1;
@@ -24,8 +24,45 @@
 .site-nav {
   float: right;
   display: inline-block;
+  font-size: 18px;
+}
+
+.sidebar-nav-item {
+  color: black;
 }
 
 .sidebar-nav-item {
   padding: 0 10px;
+}
+
+/**
+ * Home
+ */
+
+.logo {
+  text-align: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.container {
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.post-list {
+  list-style: none;
+}
+
+/**
+ * Post
+ */
+.post-title {
+  font-size: 40px;
+  font-weight: 400;
 }

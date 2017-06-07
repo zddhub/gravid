@@ -2,25 +2,30 @@
 layout: default
 ---
 
-<div class="home">
+<article class="container typo">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
+  <section class="info">
+    <div class="logo">
+      <img src="/assets/avatar.jpg" class="avatar" alt="{{ site.title }}">
+    </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+    {{ content }}
 
-        <h2>
+  </section>
+
+  <hr>
+
+  <section class="posts">
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+          {% assign date_format = site.gravid.date_format | default: "%m/%d/%Y" %}
+          <small class="post-meta">{{ post.date | date: date_format }}</small>
+          <p class="typo-small">{{ post.content | split:"<!-- more -->" | first | strip_html }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-</div>
+</article>
