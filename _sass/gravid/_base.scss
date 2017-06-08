@@ -18,3 +18,10 @@ hr {
   list-style-type: decimal;
   list-style-position: inside;
 }
+
+pre {
+  border: none;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
