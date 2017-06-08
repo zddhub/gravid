@@ -5,6 +5,6 @@ layout: home
 ZDDHUB's blog
 =============
 
-Being talented just like being gravid, I am not talented, so my blog named 'gravid'.
+Being talented just like being gravid, must be known with a long time past. I think I need more time to be talented, so I choose an easy one and named `gravid`. 😊
 
-But I still write something, as below:
+I still write something, as below:
