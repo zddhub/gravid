@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="container typo">
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <section class="posts">
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          {% assign date_format = site.gravid.date_format | default: "%m/%d/%Y" %}
+          <small class="post-meta">{{ post.date | date: date_format }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</article>

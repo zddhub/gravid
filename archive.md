@@ -1,3 +1,6 @@
 ---
-layout: default
+layout: archive
+title: Archive
 ---
+
+# Archive
