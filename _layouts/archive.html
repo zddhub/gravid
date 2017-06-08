@@ -12,7 +12,7 @@ layout: default
         <li>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           {% assign date_format = site.gravid.date_format | default: "%m/%d/%Y" %}
-          <small class="post-meta">{{ post.date | date: date_format }}</small>
+          <small class="post-meta archive">{{ post.date | date: date_format }}</small>
         </li>
       {% endfor %}
     </ul>

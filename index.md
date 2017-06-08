@@ -1,8 +1,10 @@
 ---
-#
-# You don't need to edit this file, it's empty on purpose.
-# Edit minima's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
 layout: home
 ---
+
+ZDDHUB's blog
+=============
+
+Being talented just like being gravid, I am not talented, so my blog named 'gravid'.
+
+But I still write something, as below:
