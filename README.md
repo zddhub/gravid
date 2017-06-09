@@ -46,7 +46,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/zddhub
 
 ## Thanks
 
-Inspiration from Sofish's personal blog [https://sofi.sh/](https://sofi.sh/), Thanks.
+Inspiration from [Sofish's personal blog](https://github.com/sofish/sofi.sh), Thanks.
 
 ## License
 
