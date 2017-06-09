@@ -8,7 +8,13 @@ Being talented just like being gravid, must be known with a long time past. I th
 
 ![Screenshot](/assets/gravid_blog_preview.png)
 
-## Installation
+## Usage
+
+Create a new Jekyll site:
+
+```sh
+jekyll new your-blog-name
+```
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -29,6 +35,15 @@ And then execute:
 Or install it yourself as:
 
     $ gem install gravid
+
+Copy default files to your site:
+
+```sh
+cp -r $(bundle show gravid)/*.{md,html,yml} .
+```
+
+Run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`.
+
 
 ## Development
 
