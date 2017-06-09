@@ -3,56 +3,112 @@ layout: post
 title: "My second blog"
 ---
 
-Welco me to your new Jekyll theme - gravid!
+Welcome to your new Jekyll theme - gravid!
 
-Being talented just like being gravid, I am not talented, so named 'gravid'.
+This post shows how to syntax highlighting code.
 
 <!-- more -->
 
-# gravid
+html:
 
-Welco me to your new Jekyll theme - gravid!
+```html
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-Being talented just like being gravid, I am not talented, so named 'gravid'.
+  <body>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+      </div>
+    </main>
+  </body>
 
-## Installation
+</html>
 
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "gravid"
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+c++:
 
-```yaml
-theme: gravid
+```cpp
+/*************************************************************************
+ * Copyright (c) 2014 Zhang Dongdong
+ * All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+**************************************************************************/
+#include "sketchsearcher.h"
+using namespace sse;
+
+SketchSearcher::SketchSearcher(Json &config)
+    : _indexFile(config.getValue("searcher$indexfile", "/tmp/SketchSearchDemo/data/model_indexfile"))
+    , _vocabularyFile(config.getValue("searcher$vocabulary", "/tmp/SketchSearchDemo/data/vocabulary"))
+    , _fileList(config.getValue("searcher$filelist", "/tmp/SketchSearchDemo/data/model_filelist"))
+    , _numOfResults(convert<uint>(config.getValue("searcher$results_num", "25"), UINT))
+    , _numOfViews(convert<uint>(config.getValue("searcher$views_num", "1"), UINT))
+{
+    index = new InvertedIndex();
+    index->load(_indexFile);
+
+    read(_vocabularyFile, vocabulary);
+
+    galif = new Galif();
+
+    quantizer = QuantizerHard<Vec_f32_t, L2norm_squared<Vec_f32_t> >();
+
+    files = new FileList;
+    files->load(_fileList);
+}
+
+SketchSearcher::~SketchSearcher()
+{
+    delete index;
+    delete galif;
+    delete files;
+}
+
+void SketchSearcher::query(const std::string &fileName, QueryResults &results)
+{
+    //extract features
+    KeyPoints_t keypoints;
+    Features_t features;
+    cv::Mat image = cv::imread(fileName.c_str());
+
+    galif->compute(image, keypoints, features);
+
+    //quantize
+    Vec_f32_t query;
+    quantize(features, vocabulary, query, quantizer);
+
+    TF_simple tf;
+    IDF_simple idf;
+
+    std::vector<ResultItem_t> _results;
+    //std::cout<< "query: " <<_results.size()<<std::endl;
+
+    if(_numOfViews == 1)
+    {
+        index->query(query, tf, idf, _numOfResults, _results);
+    }
+    else {
+        index->query(query, tf, idf, _numOfResults, _numOfViews, _results);
+    }
+
+    results.resize(_results.size());
+
+    for(uint i = 0; i < _results.size(); i++) {
+
+        results[i].ratio = _results[i].first;
+        results[i].imageIndex = _results[i].second;
+        results[i].imageName = files->getFilename(_results[i].second);
+    }
+}
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install gravid
-
-## Usage
-
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
