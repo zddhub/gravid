@@ -44,9 +44,9 @@ When your theme is released, only the files in `_layouts`, `_includes`, and `_sa
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/zddhub/gravid. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Inspiration
+## Thanks
 
-Inspiration from Sofish's personal blog [https://sofi.sh/](https://sofi.sh/).
+Inspiration from Sofish's personal blog [https://sofi.sh/](https://sofi.sh/), Thanks.
 
 ## License
 
