@@ -16,7 +16,8 @@ github_username:  zddhub
 gravid:
   date_format: "%m/%d/%Y"
 
-enable_reward: true
+language: en
+enable_reward: false
 
 # Build settings
 markdown: kramdown
