@@ -13,6 +13,10 @@ hr {
   border-bottom: 1px solid #eaecef;
 }
 
+table {
+  word-break: break-all;
+}
+
 .typo ul {
   margin-left: 0;
   list-style-type: decimal;
@@ -28,4 +32,8 @@ pre {
 
 .highlight {
   color: #386;
+}
+
+blockquote {
+  color: #666;
 }
