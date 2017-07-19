@@ -67,3 +67,6 @@ Inspiration from [Sofish's personal blog](https://github.com/sofish/sofi.sh), Th
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+### Contact
+
+If you have any question, please [email to me](mailto:zddhub@gmail.com).
