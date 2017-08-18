@@ -110,7 +110,7 @@
   background-color: #ea6f5a;
   border-radius: 22px;
   border: none;
-  box-shadow: 0 0 2px rgba(0,0,0,.14), 0 2px 4px rgba(0,0,0,.28);
+  transition: all 0.2s ease-out;
   font-weight: 400;
   line-height: 24px;
   cursor: pointer;
@@ -120,6 +120,8 @@
 
 .reward-button:hover {
   background-color: #f14e32;
+  transform: translateY(-2px);
+  box-shadow: 0 0 4px rgba(0,0,0,0.14), 0 4px 8px rgba(0,0,0,0.28);
 }
 
 #qr div {
