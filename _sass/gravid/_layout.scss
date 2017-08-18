@@ -120,7 +120,7 @@
 
 .reward-button:hover {
   background-color: #f14e32;
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: 0 0 4px rgba(0,0,0,0.14), 0 4px 8px rgba(0,0,0,0.28);
 }
 
@@ -132,7 +132,7 @@
 .reward {
   text-align: center;
   color: #999;
-  padding: 1em 0;
+  padding: 0.6em 0 0.8em 0;
   font-size: 14px;
   margin-bottom: 0 !important;
 }
