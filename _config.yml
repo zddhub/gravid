@@ -19,6 +19,10 @@ gravid:
 language: en
 enable_reward: false
 
+google_analytics:
+  enable: true
+  tracking_id: "UA-48441839-1"
+
 # Build settings
 markdown: kramdown
 theme: gravid
