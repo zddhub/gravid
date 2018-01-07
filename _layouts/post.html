@@ -3,7 +3,12 @@ layout: default
 ---
 
 <article class="container typo">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title">
+    {% if page.journal %}
+      <code class="highlighter-rouge">{{ page.journal }}: </code>
+    {% endif %}
+    {{ page.title }}
+  </h1>
   {{ content }}
 
   {% if site.enable_reward %} {% include reward.html %} {% endif %}

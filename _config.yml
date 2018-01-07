@@ -29,3 +29,17 @@ theme: gravid
 exclude:
   - Gemfile
   - Gemfile.lock
+
+plugins:
+  - jekyll-paginate-v2
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/journal/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  indexpage: 'journal'
