@@ -98,6 +98,17 @@
 }
 
 /**
+ * Pagination
+ */
+.pager {
+  display: flex;
+}
+
+.previous {
+  flex: 1;
+}
+
+/**
  * Archive
  */
 .archive {
