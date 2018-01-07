@@ -8,24 +8,42 @@ layout: default
       {% for post in paginator.posts %}
         {% if post.journal %}
           <article class="journal">
-            <h4><code class="highlighter-rouge">{{ post.journal }}: </code><a class="journal-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h4>
-            {% assign date_format = site.gravid.date_format | default: "%m/%d/%Y" %}
+            <h4>
+              <code class="highlighter-rouge">{{ post.journal }}: </code>
+              <a class="journal-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h4>
             <p class="typo-small">{{ post.content }}</p>
+          </article>
+        {% else %}
+          <article class="blog">
+            <h4>
+                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                {% assign date_format = site.gravid.date_format | default: "%m/%d/%Y" %}
+                <small class="post-meta">{{ post.date | date: date_format }}</small>
+            </h4>
+            <p class="typo-small">{{ post.content | split:"<!-- more -->" | first | strip_html }}</p>
           </article>
         {% endif %}
       {% endfor %}
     </div>
 
     {% if paginator.total_pages > 1 %}
-    <ul class="pager">
+    <ul class="pagination">
+        {% assign previous_text = 'Newer Journals' %}
+          {% assign next_text = 'Older Journals' %}
+        {% if site.language == 'zh-CN' %}
+          {% assign previous_text = '上一页' %}
+          {% assign next_text = '下一页' %}
+        {% endif %}
+
         {% if paginator.previous_page %}
         <li class="previous">
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; {{ previous_text }}</a>
         </li>
         {% endif %}
         {% if paginator.next_page %}
         <li class="next">
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ next_text }} &rarr;</a>
         </li>
         {% endif %}
     </ul>

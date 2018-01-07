@@ -80,6 +80,26 @@
   list-style: none;
 }
 
+.blog {
+  border: 1px #e1e4e8 solid;
+  padding: 0 16px;
+  margin-bottom: 20px;
+}
+
+/**
+ * Pagination
+ */
+.journals .pagination {
+  margin: 0;
+  margin-bottom: 36px;
+  list-style: none;
+  display: flex;
+}
+
+.journals .previous {
+  flex: 1;
+}
+
 .journal {
   margin-bottom: 88px;
 }
@@ -95,18 +115,6 @@
 
 .text-left {
   text-align: left;
-}
-
-/**
- * Pagination
- */
-.pager {
-  list-style: none;
-  display: flex;
-}
-
-.previous {
-  flex: 1;
 }
 
 /**
