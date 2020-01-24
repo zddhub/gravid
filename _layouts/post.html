@@ -11,5 +11,14 @@ layout: default
   </h1>
   {{ content }}
 
+  <div class="pagination">
+    {% if page.previous.url %}
+      <a class="previous" href="{{ page.previous.url }}">&larr; {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next.url %}
+      <a class="next" href="{{ page.next.url }}">{{ page.next.title }} &rarr;</a>
+    {% endif %}
+  </div>
+
   {% if site.enable_reward %} {% include reward.html %} {% endif %}
 </article>

@@ -89,20 +89,26 @@
 /**
  * Pagination
  */
-.journals .pagination {
+.pagination {
   margin: 0;
-  min-height: 4em;
-  margin-bottom: 36px;
+  min-height: 2em;
+  display: flex;
 }
 
-.journals .previous {
-  float: left;
+.pagination .previous {
+  flex: 1;
+  text-align: left;
   border-bottom: none;
 }
 
-.journals .next {
-  float: right;
+.pagination .next {
+  flex: 1;
+  text-align: right;
   border-bottom: none;
+}
+
+.journal {
+  margin-bottom: 3em;
 }
 
 .journal .journal-link {
