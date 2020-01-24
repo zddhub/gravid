@@ -97,13 +97,13 @@
 
 .pagination .previous {
   flex: 1;
-  text-align: left;
+  text-align: right;
   border-bottom: none;
 }
 
 .pagination .next {
   flex: 1;
-  text-align: right;
+  text-align: left;
   border-bottom: none;
 }
 
@@ -119,8 +119,8 @@
   font-weight: 300;
 }
 
-.journal {
-  margin-bottom: 88px;
+.journal, .journals {
+  margin-bottom: 4em;
 }
 
 /**

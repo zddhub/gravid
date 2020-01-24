@@ -37,10 +37,10 @@ layout: default
         {% endif %}
 
         {% if paginator.previous_page %}
-          <a class="previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; {{ newer_page }}</a>
+          <a class="next" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;  {{ newer_page }}</a>
         {% endif %}
         {% if paginator.next_page %}
-          <a class="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ older_text }} &rarr;</a>
+          <a class="previous" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ older_text }} &rarr;</a>
         {% endif %}
     </div>
     {% endif %}
