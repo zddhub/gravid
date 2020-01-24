@@ -28,25 +28,21 @@ layout: default
     </div>
 
     {% if paginator.total_pages > 1 %}
-    <ul class="pagination">
-        {% assign previous_text = 'Newer Journals' %}
-          {% assign next_text = 'Older Journals' %}
+    <div class="pagination">
+        {% assign newer_page = 'Newer Journals' %}
+          {% assign older_text = 'Older Journals' %}
         {% if site.language == 'zh-CN' %}
-          {% assign previous_text = '后一页' %}
-          {% assign next_text = '前一页' %}
+          {% assign newer_page = '上一页' %}
+          {% assign older_text = '下一页' %}
         {% endif %}
 
         {% if paginator.previous_page %}
-        <li class="previous">
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; {{ previous_text }}</a>
-        </li>
+          <a class="previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; {{ newer_page }}</a>
         {% endif %}
         {% if paginator.next_page %}
-        <li class="next">
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ next_text }} &rarr;</a>
-        </li>
+          <a class="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ older_text }} &rarr;</a>
         {% endif %}
-    </ul>
+    </div>
     {% endif %}
   </section>
 
