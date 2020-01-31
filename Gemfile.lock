@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    gravid (0.1.13)
-      jekyll
+    gravid (1.0.0)
+      jekyll (~> 4.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -67,10 +67,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
+  bundler (~> 2.1.4)
   gravid!
   jekyll-paginate
-  rake
+  rake (~> 13.0.1)
 
 BUNDLED WITH
    2.1.4

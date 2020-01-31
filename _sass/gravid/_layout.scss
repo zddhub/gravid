@@ -188,3 +188,22 @@
   font-size: 14px;
   margin-bottom: 0 !important;
 }
+
+.footer {
+  text-align: center;
+  margin: 6em 0 4em 0;
+}
+
+.copyright {
+  text-transform: uppercase;
+}
+
+.bar {
+  width: 1px;
+  height: 14px;
+  background: #e0e0e0;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  padding: 0;
+}
