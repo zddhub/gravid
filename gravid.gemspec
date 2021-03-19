@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "gravid"
-  spec.version       = "1.1.5"
+  spec.version       = "1.2.1"
   spec.authors       = ["zddhub"]
   spec.email         = ["zddhub@gmail.com"]
 
