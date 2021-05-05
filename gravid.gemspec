@@ -17,7 +17,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
-  spec.add_runtime_dependency "jekyll", "~> 4.0.0"
-  spec.add_development_dependency "bundler", "~> 2.1.4"
+  spec.add_runtime_dependency "jekyll", "~> 4.1"
+  spec.add_runtime_dependency "webrick", "~> 1.7"
+  spec.add_development_dependency "bundler", "~> 2.2"
   spec.add_development_dependency "rake", "~> 13.0.1"
 end
