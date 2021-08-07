@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My second blog"
+tags: second blog, gravid
 ---
 
 Welcome to your new Jekyll theme - gravid!
