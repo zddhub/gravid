@@ -12,17 +12,23 @@
       color: #f6f0fc;
     }
 
-    strong {
-      color: #f6f0fc;
-    }
-
     img {
       background-color: #c9d1d9;
     }
   }
 
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, em {
     color: #c9d1d9;
+  }
+
+  strong {
+    color: #f6f0fc;
+  }
+
+  .avatar {
+    height: 48px;
+    border-radius: 12px;
+    vertical-align: middle;
   }
 
   .post-meta {
