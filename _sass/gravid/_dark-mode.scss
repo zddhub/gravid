@@ -1,0 +1,39 @@
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+  }
+
+  .site-header {
+    background: #161b22;
+    border-bottom: none;
+
+    a {
+      color: #f6f0fc;
+    }
+
+    strong {
+      color: #f6f0fc;
+    }
+
+    img {
+      background-color: #c9d1d9;
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #c9d1d9;
+  }
+
+  .post-meta {
+    color: #c9d1d9;
+  }
+
+  .blog {
+    border: 1px #c9d1d9 solid;
+  }
+
+  .footer {
+    color: #8b949e;
+  }
+}
