@@ -46,4 +46,21 @@
   .footer {
     color: #8b949e;
   }
+
+  .reward-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  hr {
+    border-bottom: 1px solid #c9d1d9;
+  }
+
+  .bar {
+    background: #c9d1d9;
+  }
+
+  .typo table thead th, .typo-table thead th {
+    background: #c9d1d9;
+  }
 }
