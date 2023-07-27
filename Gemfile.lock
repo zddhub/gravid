@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gravid (1.5.6)
+    gravid (1.5.7)
       jekyll (~> 4.3)
 
 GEM
